@@ -66,6 +66,7 @@ export function Team() {
                   alt={member.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                  priority
                   className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
