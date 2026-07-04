@@ -1,12 +1,20 @@
+import React from "react";
+import { Navbar } from "@/components/layout/Navbar";
+import { Hero } from "@/components/sections/Hero";
+import { Team } from "@/components/sections/Team";
+import { Products } from "@/components/sections/Products";
+import { ScrollProgress } from "@/components/ui/scroll-progress";
+
 export default function Home() {
   return (
-    <main className="flex flex-1 flex-col items-center justify-center p-8 text-center">
-      <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-        Bienvenue sur 3T.tech
-      </h1>
-      <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
-        Votre portfolio est prêt. Modifiez <code className="font-mono bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 rounded text-sm">app/page.tsx</code> pour commencer !
-      </p>
-    </main>
+    <>
+      <ScrollProgress className="top-0 bg-gradient-to-r from-orange-400 to-orange-600 h-1.5" />
+      <Navbar />
+      <div className="flex flex-col min-h-screen">
+        <Hero />
+        <Team />
+        <Products />
+      </div>
+    </>
   );
 }
