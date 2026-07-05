@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr" className={cn("h-full", "font-sans", geist.variable)}>
+    <html lang="fr" className={cn("h-full", geist.className)}>
       <body className="min-h-full bg-background text-foreground antialiased flex flex-col">
         {children}
       </body>
