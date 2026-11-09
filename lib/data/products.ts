@@ -52,7 +52,7 @@ export const products: Product[] = [
       { label: "Hausse moyenne des revenus", value: "+50%" },
       { label: "Objectif Artisans autonomisés", value: "50 000" }
     ],
-    apkUrl: "/assets/apk/jobbersfind.apk"
+    apkUrl: "https://mega.nz/file/vQRSCQRL#s674pSXkUVKoqDfHmXx64z458I2wxnrR1OKa2QLDEPY"
   },
   {
     id: "mboacash",
