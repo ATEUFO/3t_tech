@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "motion/react";
 import { GlyphMatrix } from "@/components/ui/glyph-matrix";
 import { NoiseTexture } from "@/components/ui/noise-texture";
@@ -64,9 +65,11 @@ export function Products() {
                 <br /><br />
                 <strong>Jobbersfind</strong> est la solution.
               </p>
-              <button className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-8 py-3 rounded-full font-medium hover:scale-105 transition-transform">
-                En savoir plus
-              </button>
+              <Link href="/products/jobbersfind">
+                <button className="bg-zinc-900 text-white dark:bg-white dark:text-zinc-900 px-8 py-3 rounded-full font-medium hover:scale-105 transition-transform shadow-lg hover:shadow-orange-500/20">
+                  En savoir plus sur le produit
+                </button>
+              </Link>
             </div>
           </div>
         </motion.div>
