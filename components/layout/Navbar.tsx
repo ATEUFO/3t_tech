@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Dock, DockIcon } from "@/components/ui/dock";
-import { HomeIcon, Users, Package, Mail } from "lucide-react";
+import { HomeIcon, Users, Package, Mail, Zap } from "lucide-react";
 
 export function Navbar() {
   return (
@@ -10,6 +10,9 @@ export function Navbar() {
       <Dock className="bg-white/50 border border-zinc-200 shadow-xl">
         <DockIcon onClick={() => document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' })}>
           <HomeIcon className="size-6 text-zinc-800" />
+        </DockIcon>
+        <DockIcon onClick={() => document.getElementById('vision')?.scrollIntoView({ behavior: 'smooth' })}>
+          <Zap className="size-6 text-zinc-800" />
         </DockIcon>
         <DockIcon onClick={() => document.getElementById('team')?.scrollIntoView({ behavior: 'smooth' })}>
           <Users className="size-6 text-zinc-800" />
