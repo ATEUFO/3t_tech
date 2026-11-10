@@ -1,8 +1,10 @@
 import React from "react";
 import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
-import { Team } from "@/components/sections/Team";
+import { Vision } from "@/components/sections/Vision";
 import { Products } from "@/components/sections/Products";
+import { Team } from "@/components/sections/Team";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 
 export default function Home() {
@@ -12,9 +14,11 @@ export default function Home() {
       <Navbar />
       <div className="flex flex-col min-h-screen">
         <Hero />
-        <Team />
+        <Vision />
         <Products />
+        <Team />
       </div>
+      <Footer />
     </>
   );
 }
