@@ -12,7 +12,7 @@ const teamMembers = [
     image: "/assets/peoples/Profile ATEUFO Arthur.jpg",
   },
   {
-    name: "TSOPFACK DONCFACK Durel",
+    name: "TSOPFACK DONFACK Durel",
     role: "Ingénieur réseau",
     image: "/assets/peoples/TSOPFACK DONCFACK Durel.jpg",
   },
