@@ -20,6 +20,7 @@ export interface Product {
     value: string;
   }[];
   apkUrl?: string;
+  webUrl?: string;
   escrowPhases?: {
     step: string;
     title: string;
@@ -79,6 +80,7 @@ export const products: Product[] = [
       { label: "Objectif Artisans autonomisés", value: "50 000" }
     ],
     apkUrl: "https://mega.nz/file/vQRSCQRL#s674pSXkUVKoqDfHmXx64z458I2wxnrR1OKa2QLDEPY",
+    webUrl: "https://jobberfind-web.vercel.app/",
     keyHighlights: [
       {
         title: "Recherche Géolocalisée en Temps Réel",

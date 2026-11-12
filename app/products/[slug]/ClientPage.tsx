@@ -26,7 +26,9 @@ import {
   Users,
   Smartphone,
   Check,
-  ShieldAlert
+  ShieldAlert,
+  ExternalLink,
+  Globe
 } from "lucide-react";
 import { getProductBySlug } from "@/lib/data/products";
 import { Navbar } from "@/components/layout/Navbar";
@@ -110,23 +112,40 @@ export default function ClientPage({ slug }: { slug: string }) {
                 ))}
               </div>
 
-              {product.apkUrl && (
+              {(product.apkUrl || product.webUrl) && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
+                  className="space-y-4"
                 >
-                  <a
-                    href={product.apkUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg hover:shadow-orange-500/30 hover:scale-105 group"
-                  >
-                    <Download className="w-5 h-5 mr-2 group-hover:-translate-y-1 transition-transform" />
-                    Télécharger l'APK Android
-                  </a>
-                  <p className="mt-2.5 text-xs text-zinc-500 dark:text-zinc-400 font-medium">
-                    Version Bêta • Déploiement direct certifié 3T
+                  <div className="flex flex-wrap items-center gap-3">
+                    {product.webUrl && (
+                      <a
+                        href={product.webUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-7 py-3.5 text-base font-bold text-white transition-all bg-gradient-to-r from-orange-500 to-orange-600 rounded-full shadow-lg hover:shadow-orange-500/30 hover:scale-105 group"
+                      >
+                        <Globe className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                        Accéder à l'application Web
+                        <ExternalLink className="w-4 h-4 ml-2 opacity-80" />
+                      </a>
+                    )}
+                    {product.apkUrl && (
+                      <a
+                        href={product.apkUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-7 py-3.5 text-base font-semibold text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-900 border border-zinc-300 dark:border-zinc-700 rounded-full shadow-sm hover:border-orange-500 hover:text-orange-500 transition-all hover:scale-105 group"
+                      >
+                        <Download className="w-5 h-5 mr-2 group-hover:-translate-y-0.5 transition-transform text-orange-500" />
+                        Télécharger l'APK (Android)
+                      </a>
+                    )}
+                  </div>
+                  <p className="text-xs text-zinc-500 dark:text-zinc-400 font-medium">
+                    Disponible en ligne directement depuis votre navigateur ou en application mobile Android.
                   </p>
                 </motion.div>
               )}
@@ -514,6 +533,52 @@ export default function ClientPage({ slug }: { slug: string }) {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* SPECIALIZED JOBBERSFIND LIVE WEB & SERVICE DISCOVERY */}
+      {isJobbersFind && product.webUrl && (
+        <section className="py-20 bg-white dark:bg-zinc-950 border-b border-zinc-200 dark:border-zinc-800">
+          <div className="container mx-auto px-4 max-w-6xl">
+            <div className="p-8 md:p-12 rounded-3xl bg-gradient-to-br from-orange-50 via-zinc-50 to-amber-50 dark:from-zinc-900 dark:via-zinc-900/90 dark:to-orange-950/20 border border-orange-200/80 dark:border-orange-900/40 shadow-xl flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="space-y-4 max-w-2xl">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/30">
+                  <Globe className="w-4 h-4 mr-1" />
+                  Plateforme en Ligne
+                </span>
+                <h3 className="text-2xl md:text-4xl font-extrabold text-zinc-900 dark:text-white">
+                  Testez JobbersFind directement sur le Web
+                </h3>
+                <p className="text-zinc-600 dark:text-zinc-400 text-base md:text-lg leading-relaxed">
+                  Pas besoin d'installer l'application pour explorer les services : accédez à la version web officielle pour rechercher des artisans qualifiés, consulter leurs portfolios certifiés et demander un dépannage en quelques clics.
+                </p>
+                <div className="flex flex-wrap items-center gap-3 pt-2 text-xs font-medium text-zinc-500 dark:text-zinc-400">
+                  <span className="flex items-center gap-1">
+                    <CheckCircle2 className="w-4 h-4 text-orange-500" /> Sans téléchargement préalable
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <CheckCircle2 className="w-4 h-4 text-orange-500" /> Compatible mobile &amp; ordinateur
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <CheckCircle2 className="w-4 h-4 text-orange-500" /> Recherche géolocalisée temps réel
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex-shrink-0 w-full md:w-auto">
+                <a
+                  href={product.webUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-full md:w-auto px-8 py-4 rounded-2xl bg-orange-500 hover:bg-orange-600 text-white font-bold text-base shadow-lg shadow-orange-500/25 hover:scale-105 transition-all group"
+                >
+                  <Globe className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                  Ouvrir jobberfind-web
+                  <ExternalLink className="w-4 h-4 ml-2" />
+                </a>
               </div>
             </div>
           </div>
