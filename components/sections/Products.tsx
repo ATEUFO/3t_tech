@@ -177,14 +177,20 @@ export function Products() {
                         {product.tagline}
                       </p>
 
-                      {/* Chips tech */}
+                      {/* Plus-values clés */}
                       <div className="flex flex-wrap gap-2 mb-6 pt-4 border-t border-zinc-200 dark:border-zinc-800">
-                        {product.techStack.slice(0, 3).map((tech, tIdx) => (
+                        {(
+                          {
+                            jobbersfind: ["Proximité 1-3 km", "Artisans certifiés", "Confiance garantie"],
+                            mboacash: ["Fonds sécurisés", "Achat fractionné", "Zéro arnaque"],
+                            somnialert: ["Détection < 2s", "Freinage assisté", "100% autonome"],
+                          }[product.id] ?? product.valuePropositions.slice(0, 3)
+                        ).map((val, vIdx) => (
                           <span
-                            key={tIdx}
+                            key={vIdx}
                             className="text-xs px-2.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 font-medium"
                           >
-                            {tech.split(" ")[0]}
+                            {val}
                           </span>
                         ))}
                       </div>

@@ -9,7 +9,7 @@ export interface Product {
   heroImage: string;
   description: string;
   gallery: string[];
-  techStack: string[];
+  valuePropositions: string[];
   vision: {
     problem: string;
     solution: string;
@@ -56,31 +56,31 @@ export const products: Product[] = [
     slug: "jobbersfind",
     name: "JobbersFind",
     category: "Services & Emploi de Proximité",
-    badge: "Plateforme Numérique",
+    badge: "Plateforme de Mise en Relation",
     tagline: "Connecter les talents locaux, transformer des vies, bâtir la confiance.",
     logo: "/assets/jobbersfind_logo_form.png",
     heroImage: "/assets/images_jobbeersfind/image_accueil.jpg",
-    description: "Une plateforme digitale intelligente qui connecte instantanément et en toute sécurité toute personne ayant un besoin de service avec l'artisan ou le technicien certifié le plus proche et le plus qualifié.",
+    description: "Une plateforme intelligente qui connecte instantanément et en toute sécurité toute personne ayant un besoin de service avec l'artisan ou le technicien certifié le plus proche et le plus qualifié.",
     gallery: [
       "/assets/images_jobbeersfind/page profile verifier artisan.jpg",
       "/assets/images_jobbeersfind/setting_de recherchejpg.jpg",
       "/assets/images_jobbeersfind/photo_2026-07-24_11-05-30.jpg",
       "/assets/images_jobbeersfind/photo_2026-07-24_11-05-26.jpg",
     ],
-    techStack: [
-      "Flutter (Mobile iOS & Android)",
-      "NestJS (Backend Architecture)",
-      "PostGIS (Géolocalisation Spatiale)",
-      "Socket.io (WebSockets Temps Réel)",
-      "NLP (Recherche Sémantique Multilingue)"
+    valuePropositions: [
+      "Intervention rapide à proximité (1 à 3 km)",
+      "Artisans vérifiés avec portfolios certifiés",
+      "Tarifs transparents sans intermédiaire opaque",
+      "Évaluation réciproque et confiance garantie",
+      "Valorisation du savoir-faire et de l'emploi local"
     ],
     vision: {
-      problem: "Dans chaque métropole d'Afrique subsaharienne, il existe une armée silencieuse de héros du quotidien (mécaniciens, électriciens, plombiers, artisans) dont le talent exceptionnel reste invisible. La population fait face au chômage et au sous-emploi, tandis que les utilisateurs subissent une crise de confiance aiguë, craignant arnaques, surfacturations et absence de qualification vérifiée.",
-      solution: "JobbersFind est la réponse technologique et sociétale de 3T Global Tech. Un moteur de recherche sémantique couplé à une géolocalisation spatiale de haute précision permet de trouver l'artisan idéal en quelques secondes dans un rayon de 1 à 3 km. Les portfolios vérifiés, avec photos et vidéos de réalisations, ainsi qu'un système d'évaluation réciproque, réintroduisent la confiance au cœur des transactions humaines.",
-      impact: "L'impact est double. Humainement, nous redonnons dignité et revenus réguliers aux artisans, les transformant en entrepreneurs accomplis. Écologiquement, en facilitant la réparation plutôt que le remplacement, et en favorisant des interventions de proximité immédiate, JobbersFind participe activement à l'économie circulaire et à la réduction des émissions de CO2."
+      problem: "Dans chaque métropole, il existe une armée silencieuse de héros du quotidien (mécaniciens, électriciens, plombiers, artisans) dont le talent exceptionnel reste invisible. La population fait face au chômage et au sous-emploi, tandis que les clients subissent une crise de confiance aiguë, craignant arnaques, surfacturations et absence de qualification vérifiée.",
+      solution: "JobbersFind est la réponse sociétale et économique de 3T Global Tech. Une recherche intelligente couplée à la localisation de proximité permet de trouver l'artisan idéal en quelques secondes dans un rayon de 1 à 3 km. Les portfolios vérifiés, avec photos et vidéos de réalisations, ainsi qu'un système d'évaluation réciproque, réintroduisent la confiance au cœur des échanges.",
+      impact: "L'impact est double. Humainement, nous redonnons dignité et revenus réguliers aux artisans, les transformant en entrepreneurs accomplis. Écologiquement, en facilitant la réparation plutôt que le remplacement, et en favorisant des déplacements courts, JobbersFind participe activement à l'économie circulaire."
     },
     metrics: [
-      { label: "Secteur informel digitalisé", value: "90%" },
+      { label: "Secteur informel valorisé", value: "90%" },
       { label: "Hausse moyenne des revenus", value: "+50%" },
       { label: "Objectif Artisans autonomisés", value: "50 000" }
     ],
@@ -88,117 +88,109 @@ export const products: Product[] = [
     webUrl: "https://jobberfind-web.vercel.app/",
     keyHighlights: [
       {
-        title: "Recherche Géolocalisée en Temps Réel",
-        description: "Détection automatique des meilleurs spécialistes à proximité immédiate (1 à 3 km) via PostGIS pour des interventions ultra-rapides."
+        title: "Proximité Immédiate (1 à 3 km)",
+        description: "Identification instantanée des meilleurs spécialistes disponibles autour de vous pour réduire les délais et coûts de déplacement."
       },
       {
-        title: "Profils d'Artisans Certifiés & Portfolios",
-        description: "Vérification rigoureuse des pièces d'identité, certifications professionnelles et historique transparent des avis clients."
+        title: "Profils Certifiés & Portfolios Réels",
+        description: "Vérification des identités, des compétences et consultation des réalisations passées avec avis clients authentifiés."
       },
       {
-        title: "Mise en Relation Directe & Chat Sécurisé",
-        description: "Messagerie instantanée et suivi des demandes de dépannage sans intermédiaire opaque."
+        title: "Relation Directe & Équitable",
+        description: "Prise de contact directe et suivi clair des prestations pour protéger autant le client que le prestataire."
       }
-    ],
-    partnerLogos: [
-      { name: "Flutter", logo: "/assets/brands/flutter.svg", role: "Application Mobile" },
-      { name: "NestJS", logo: "/assets/brands/nestjs.svg", role: "Backend API" },
-      { name: "PostgreSQL / PostGIS", logo: "/assets/brands/postgresql.svg", role: "Géolocalisation Spatiale" },
-      { name: "Socket.io", logo: "/assets/brands/socketio.svg", role: "Temps Réel" }
     ]
   },
   {
     id: "mboacash",
     slug: "mboacash",
     name: "MboaCash",
-    category: "Fintech & Séquestre Numérique",
+    category: "Commerce & Confiance Numérique",
     badge: "Tiers de Confiance E-commerce",
-    tagline: "L'institution de régulation et le tiers de confiance du e-commerce au Cameroun et en zone CEMAC.",
+    tagline: "Le tiers de confiance qui sécurise chaque achat et vente en ligne.",
     logo: "/assets/mboacash_logo.png",
     heroImage: "/assets/mboacash_image.jpeg",
-    description: "La première solution de paiement sous séquestre numérique (Escrow) et d'épargne-achat (Layaway) conçue pour éliminer les arnaques en ligne, protéger les acheteurs et sécuriser les revenus des commerçants.",
+    description: "La solution de paiement sous séquestre et d'épargne-achat conçue pour éliminer les arnaques en ligne, protéger les acheteurs et garantir les revenus des commerçants.",
     gallery: [
       "/assets/images_mboacash/page-2.png",
       "/assets/images_mboacash/page-3.png",
       "/assets/images_mboacash/page-4.png",
       "/assets/images_mboacash/page-5.png"
     ],
-    techStack: [
-      "Système de Séquestre Numérique (Escrow)",
-      "Intégration Mobile Money (Orange Money & MTN MoMo)",
-      "Chiffrement Bancaire SSL/TLS & Auth PIN / OTP",
-      "Firebase Cloud Messaging (Push & SMS temps réel)",
-      "Traçabilité Unifiée & Historique Infalsifiable",
-      "Module d'Arbitrage Équitable & Pré-analyse IA"
+    valuePropositions: [
+      "100% des fonds protégés jusqu'à la livraison",
+      "Zéro risque d'impayé pour le vendeur",
+      "Achat à Long Terme sans crédit ni endettement",
+      "Compatible Orange Money & MTN Mobile Money",
+      "Service d'arbitrage impartial en cas de litige"
     ],
     vision: {
-      problem: "Le Cameroun connaît une digitalisation fulgurante : WhatsApp, Facebook et Instagram sont devenus de gigantesques marchés ouverts. Pourtant, le e-commerce reste paralysé par un déficit total de confiance. L'acheteur redoute d'envoyer l'argent d'avance face aux vendeurs fantômes ou aux produits non conformes sans aucun recours ; le vendeur craint le paiement à la livraison (Cash on Delivery) qui le contraint à avancer des frais logistiques pour des commandes annulées ou refusées à l'arrivée.",
-      solution: "MboaCash se positionne comme l'arbitre neutre et incorruptible garantissant l'équité totale de l'échange. Grâce à notre technologie de séquestre numérique (Escrow), les fonds de l'acheteur sont sécurisés dans un portefeuille de transit inviolable. Le vendeur est notifié de la solvabilité garantie et peut expédier en toute sérénité. Les fonds ne sont libérés qu'après inspection physique et validation du produit par l'acheteur, avec un protocole d'arbitrage immédiat en cas de litige.",
-      impact: "MboaCash lève le principal verrou psychologique et financier du commerce électronique en Afrique centrale. En instaurant une confiance institutionnelle et en proposant le paiement fractionné sécurisé (Achat à Long Terme), MboaCash multiplie le volume d'affaires des commerçants, protège le pouvoir d'achat des consommateurs contre les arnaques et propulse l'économie numérique locale vers de nouveaux sommets."
+      problem: "Les réseaux sociaux (WhatsApp, Facebook, Instagram) sont devenus de gigantesques marchés ouverts, mais le commerce en ligne reste freiné par un déficit total de confiance. L'acheteur redoute de payer d'avance face aux vendeurs fantômes ou aux produits non conformes ; le vendeur craint la livraison contre remboursement qui lui fait avancer des frais logistiques pour des commandes annulées à l'arrivée.",
+      solution: "MboaCash agit comme un arbitre neutre et incorruptible garantissant l'équité totale de l'échange. Les fonds de l'acheteur sont mis à l'abri le temps de la livraison. Le vendeur a la certitude d'être payé et expédie sereinement. L'argent n'est libéré qu'après vérification du colis par l'acheteur, avec une procédure d'arbitrage rapide en cas de désaccord.",
+      impact: "MboaCash lève le principal frein psychologique et financier du commerce en ligne. En instaurant la confiance et en proposant l'Achat à Long Terme (la digitalisation de la tontine d'achat sans crédit bancaire), la solution stimule le chiffre d'affaires des commerçants tout en protégeant le pouvoir d'achat des ménages."
     },
     metrics: [
       { label: "Fonds protégés sous séquestre", value: "100%" },
       { label: "Risque d'impayé commerçant", value: "0%" },
-      { label: "Sécurité & Authentification", value: "PIN & OTP" },
+      { label: "Protection Acheteur & Vendeur", value: "Totale" },
       { label: "Compatibilité Mobile Money", value: "Orange & MTN" }
     ],
     escrowPhases: [
       {
         step: "01",
         title: "Initialisation",
-        description: "L'acheteur crée la transaction sur l'application en indiquant le montant convenu et le numéro de téléphone du vendeur."
+        description: "L'acheteur crée la transaction en quelques secondes en indiquant le montant convenu et le numéro du vendeur."
       },
       {
         step: "02",
         title: "Mise sous Séquestre",
-        description: "Le compte de l'acheteur est débité. Les fonds sont isolés dans le portefeuille de transit sécurisé MboaCash. Le vendeur reçoit une notification certifiant que l'argent est disponible et garanti."
+        description: "Les fonds sont isolés dans un espace sécurisé MboaCash. Le vendeur reçoit immédiatement la confirmation que l'argent est disponible et garanti."
       },
       {
         step: "03",
-        title: "Expédition Sécurisée",
-        description: "Le vendeur expédie le produit sans risque : il a la certitude absolue que la solvabilité de l'acheteur est garantie par la plateforme."
+        title: "Expédition Sereine",
+        description: "Le vendeur expédie le colis sans crainte : il a la certitude absolue de recevoir son paiement dès que la livraison est honorée."
       },
       {
         step: "04",
-        title: "Libération des Fonds (Release)",
-        description: "À la réception et après vérification du colis, l'acheteur valide la transaction sur son smartphone. MboaCash transfère immédiatement les fonds dans le portefeuille du vendeur."
+        title: "Libération des Fonds",
+        description: "À la réception et après vérification du colis, l'acheteur valide l'opération. MboaCash verse instantanément les fonds au vendeur."
       }
     ],
     keyHighlights: [
       {
-        title: "L'Achat à Long Terme (Épargne-Achat / Layaway)",
-        description: "Alternative éthique au crédit : l'acheteur épargne à son rythme en versant des acomptes sécurisés jusqu'à 100% pour bloquer un produit de valeur sans risque de surendettement, pendant que le vendeur sécurise son futur chiffre d'affaires."
+        title: "L'Achat à Long Terme (Épargne-Achat)",
+        description: "Alternative éthique au crédit : l'acheteur bloque le prix du produit et verse des acomptes à son rythme jusqu'à 100% sans risque de surendettement, pendant que le vendeur sécurise ses ventes futures."
       },
       {
-        title: "Portefeuille Électronique Multi-Opérateurs",
-        description: "Recharge et retrait ultra-rapides vers Orange Money, MTN Mobile Money et comptes bancaires avec génération d'identifiant unique par action."
+        title: "Dépôts & Retraits Multi-Opérateurs",
+        description: "Recharge et retrait simples et rapides via Orange Money, MTN Mobile Money et comptes bancaires avec suivi clair de chaque transaction."
       },
       {
-        title: "Sécurité de Niveau Bancaire",
-        description: "Communications chiffrées de bout en bout (SSL/TLS), code PIN secret pour chaque validation et codes OTP pour les montants élevés."
+        title: "Arbitrage Rapide & Équitable",
+        description: "En cas de produit non conforme ou de retard anormal, le client bloque le paiement et notre service d'arbitrage tranche sur preuves pour rembourser la partie lésée."
       },
       {
-        title: "Module d'Arbitrage Impartial",
-        description: "En cas de litige ou de marchandise non conforme, l'acheteur suspend la libération et MboaCash arbitre sur pièces pour rembourser la partie lésée."
+        title: "Confidentialité & Respect des Données",
+        description: "Aucune donnée personnelle n'est monétisée : les informations servent uniquement à vérifier l'identité des participants et à prévenir la fraude."
       }
     ],
     partnerLogos: [
       { name: "Orange Money", logo: "/assets/brands/orange-money.svg", role: "Paiement & Retrait" },
       { name: "MTN Mobile Money", logo: "/assets/brands/mtn.svg", role: "Paiement & Retrait" },
-      { name: "Firebase", logo: "/assets/brands/firebase.svg", role: "Notifications Push Temps Réel" },
-      { name: "Google Play", logo: "/assets/brands/google-play.svg", role: "Distribution Android" }
+      { name: "Google Play", logo: "/assets/brands/google-play.svg", role: "Application Mobile" }
     ]
   },
   {
     id: "somnialert",
     slug: "somnialert",
     name: "SomniAlert",
-    category: "IoT Embarqué & IA Sécurité Routière",
-    badge: "Innovation DeepTech Africaine",
-    tagline: "L'intelligence artificielle embarquée au service de la sécurité routière africaine.",
+    category: "Sécurité Routière & Prévention Active",
+    badge: "Innovation Sécurité Routière",
+    tagline: "La prévention intelligente au service de la vie sur nos routes.",
     logo: "/assets/somnialert_logo.png",
     heroImage: "/assets/images_somnialert/somnialert_presentation.png",
-    description: "Le premier kit IoT aftermarket africain combinant vision par ordinateur infrarouge, analyse IA en temps réel, assistance mécanique au freinage hydraulique et géolocalisation spatiale GNSS pour prévenir la somnolence et les malaises au volant.",
+    description: "Le premier kit embarqué adaptable à tout véhicule capable de détecter la somnolence ou un malaise du conducteur, d'alerter immédiatement et de ralentir automatiquement le véhicule pour éviter l'accident.",
     gallery: [
       "/assets/images_somnialert/somnialert_vigilant.png",
       "/assets/images_somnialert/somnialert_alerte.png",
@@ -206,31 +198,30 @@ export const products: Product[] = [
       "/assets/images_somnialert/somnialert_gnss.png",
       "/assets/images_somnialert/somnialert_architecture.png"
     ],
-    techStack: [
-      "Vision Infrarouge Jour/Nuit (68 points faciaux)",
-      "IA Embarquée Edge Computing (< 2s de détection)",
-      "Positionnement Satellitaire GNSS / Constellations GPS",
-      "Actionneur Linéaire & Solénoïde de Freinage Hydraulique",
-      "Télémétrie SMS Automatique & Alerte Gestionnaire de Flotte",
-      "Architecture 100% Autonome Hors-Ligne (No-Cloud Dependency)"
+    valuePropositions: [
+      "Détection de la somnolence et des malaises en moins de 2s",
+      "Intervention automatique pour ralentir le véhicule en douceur",
+      "Fonctionne de jour comme de nuit sans connexion Internet",
+      "Alerte automatique des secours et proches avec position GPS",
+      "Adaptable sur tout véhicule existant sans modification lourde"
     ],
     vision: {
-      problem: "Chaque année, les routes africaines causent entre 260 000 et 300 000 décès, soit 24% des décès routiers mondiaux pour seulement 4% du parc automobile mondial (taux record de 19,6 décès pour 100 000 habitants). Au Cameroun, 678 personnes ont perdu la vie dans 1 781 accidents en 2024, avec un coût annuel colossal estimé à 800 milliards FCFA. Parmi les causes les plus critiques figurent la somnolence, les malaises cardiaques et les pertes de connaissance soudaines, qui laissent le véhicule sans contrôle en quelques secondes.",
-      solution: "SomniAlert transforme n'importe quel véhicule conventionnel en système intelligent de prévention active. Une caméra infrarouge surveille en permanence le visage de jour comme de nuit en suivant 68 points biométriques. Une IA locale (Edge Computing) analyse l'ouverture des yeux et les bâillements en moins de 2 secondes. Si un micro-sommeil survient, SomniAlert déclenche une alerte sonore et lumineuse progressive. En l'absence de réaction, le système active automatiquement les feux de détresse, ralentit le véhicule en douceur via un actionneur de freinage hydraulique et transmet la position GPS par satellite.",
-      impact: "Premier kit aftermarket d'Afrique subsaharienne capable d'intervenir mécaniquement sur le véhicule avant le drame, SomniAlert protège les passagers des transports interurbains, les chauffeurs de poids lourds et les flottes logistiques. Il préserve des milliers de vies humaines et réduit drastiquement les pertes économiques matérielles sur les corridors de transport africains."
+      problem: "Chaque année, les routes africaines causent entre 260 000 et 300 000 décès, soit 24% de la mortalité routière mondiale pour seulement 4% du parc automobile. Au Cameroun, 678 personnes ont perdu la vie en 2024 dans 1 781 accidents, dont 70% liés au facteur humain, pour un coût annuel estimé à 800 milliards FCFA. La somnolence, les malaises et les pertes de connaissance frappent en quelques secondes et laissent le véhicule sans contrôle.",
+      solution: "SomniAlert transforme n'importe quel véhicule classique en bouclier actif contre les accidents. Le dispositif observe le visage du conducteur de jour comme de nuit et repère les signes de micro-sommeil ou d'incapacité en moins de 2 secondes. Si le conducteur ne réagit pas à l'alerte sonore et lumineuse, SomniAlert active les feux de détresse, ralentit progressivement le véhicule en sécurité et envoie la position exacte aux secours et gestionnaires de flotte.",
+      impact: "Premier dispositif du genre conçu pour les réalités de transport en Afrique, SomniAlert protège les passagers des bus interurbains, les chauffeurs routiers et les flottes d'entreprises. Il sauve des vies humaines, réduit les drames familiaux et évite des pertes matérielles colossales sur les axes routiers."
     },
     metrics: [
-      { label: "Temps de détection IA", value: "< 2s" },
-      { label: "Points faciaux analysés", value: "68 pts" },
-      { label: "Autonomie sans connexion", value: "100%" },
-      { label: "Adaptabilité tous véhicules", value: "Kit Aftermarket" }
+      { label: "Temps de réaction", value: "< 2s" },
+      { label: "Points du visage suivis", value: "68 pts" },
+      { label: "Autonomie sans réseau", value: "100%" },
+      { label: "Compatibilité véhicules", value: "Universelle" }
     ],
     detectionStates: [
       {
         number: "01",
         title: "Conducteur Vigilant",
         status: "Surveillance Active",
-        description: "Le système est en mode surveillance active en continu. La caméra infrarouge valide que les indices faciaux et le clignement oculaire sont dans les seuils normaux. Aucune alerte n'est requise.",
+        description: "Le dispositif veille en continu, de jour comme de nuit. Les signes d'attention du conducteur sont normaux : le trajet se poursuit sereinement sans aucune gêne.",
         image: "/assets/images_somnialert/somnialert_vigilant.png",
         color: "green"
       },
@@ -238,57 +229,57 @@ export const products: Product[] = [
         number: "02",
         title: "Alerte Somnolence",
         status: "Alerte Sonore & Visuelle",
-        description: "Le ratio d'ouverture des yeux descend sous le seuil critique (yeux fermés > 2 secondes ou bâillements répétés). SomniAlert déclenche immédiatement une alarme sonore stridente et des LED d'avertissement pour réveiller le conducteur.",
+        description: "Dès que les yeux restent fermés plus de 2 secondes ou que des signes de fatigue critique apparaissent, SomniAlert déclenche une alarme sonore et des voyants lumineux pour réveiller immédiatement le conducteur.",
         image: "/assets/images_somnialert/somnialert_alerte.png",
         color: "amber"
       },
       {
         number: "03",
         title: "Incapacité Confirmée",
-        status: "Action Physique Immédiate",
-        description: "Aucune réaction du conducteur n'est enregistrée. SomniAlert active automatiquement les feux de détresse, enclenche le freinage hydraulique progressif via actionneur linéaire pour arrêter le véhicule en douceur, et émet un SMS de détresse avec position GPS satellitaire.",
+        status: "Mise en Sécurité Automatique",
+        description: "Si le conducteur ne réagit pas (malaise, perte de connaissance), SomniAlert allume les feux de détresse, ralentit le véhicule en douceur jusqu'à l'arrêt et envoie un SMS d'urgence avec sa localisation exacte.",
         image: "/assets/images_somnialert/somnialert_action.png",
         color: "red"
       }
     ],
     hardwareSpecs: [
       {
-        title: "Caméra Infrarouge Haute Définition",
-        description: "Surveillance continue du visage opérationnelle de jour comme de nuit, insensible aux reflets ou à l'obscurité totale."
+        title: "Surveillance Jour & Nuit",
+        description: "Vision claire de l'état de vigilance du conducteur en pleine journée comme dans l'obscurité totale de la nuit."
       },
       {
-        title: "IA Embarquée (Edge Computing)",
-        description: "Traitement des algorithmes de vision par ordinateur directement à bord du boîtier, sans nécessiter de connexion internet ou de serveur distant."
+        title: "100% Autonome Hors-Ligne",
+        description: "Fonctionne intégralement à bord du véhicule sans dépendre d'une connexion Internet, même dans les zones rurales les plus isolées."
       },
       {
-        title: "Module Satellitaire GNSS",
-        description: "Connexion aux constellations de satellites GPS pour une géolocalisation spatiale précise en temps réel, même sur les axes ruraux non couverts par la 4G."
+        title: "Localisation Satellitaire de Précision",
+        description: "Suivi en temps réel et transmission automatique des coordonnées exactes aux secours ou au gestionnaire de flotte en cas d'incident."
       },
       {
-        title: "Actionneur Linéaire & Solénoïde de Freinage",
-        description: "Dispositif électromécanique de sécurité qui applique une assistance progressive au circuit de freinage hydraulique pour ralentir le véhicule sans à-coups."
+        title: "Ralentissement Assisté en Douceur",
+        description: "Prise de relais progressive sur le freinage pour stopper le véhicule en sécurité sans à-coup brutal."
       },
       {
-        title: "Console Cockpit & Alertes Sonores",
-        description: "Écran d'affichage de statut (Vigilant, Alerte, Action) couplé à un avertisseur sonore puissant et à des voyants LED haute visibilité."
+        title: "Indicateur Clair au Tableau de Bord",
+        description: "Affichage immédiat du niveau de vigilance (Vigilant, Alerte ou Action) avec alarme sonore efficace."
       },
       {
-        title: "Modem SMS d'Urgence & Plateforme de Flotte",
-        description: "Transmission automatique des coordonnées d'incident aux secours et aux gestionnaires de flottes sur une plateforme centralisée."
+        title: "Alerte Instantanée des Proches & Flottes",
+        description: "Envoi automatique de message d'urgence et visibilité centralisée pour les compagnies de transport."
       }
     ],
     keyHighlights: [
       {
-        title: "Zéro Dépendance au Réseau Cloud",
-        description: "100% opérationnel en zones blanches ou reculées grâce au traitement neuronal local sur puce embarquée."
+        title: "Zéro Modification Lourde du Véhicule",
+        description: "Installation rapide en kit adaptable sur tout modèle de voiture, car de transport ou camion déjà en circulation."
       },
       {
-        title: "Installation Aftermarket Universelle",
-        description: "S'adapte sur tout modèle de voiture, car de transport ou camion existant sans modification structurelle lourde."
+        title: "Fiabilité sur Axes Isolés",
+        description: "Conçu pour rester pleinement actif là où la couverture téléphonique est faible et où les secours mettent le plus de temps à arriver."
       },
       {
-        title: "Lien avec les Technologies Spatiales",
-        description: "Suivi satellitaire en direct et préfiguration d'une connectivité satellite basse orbite (Low-Orbit) pour une couverture totale du continent africain."
+        title: "Prévention Proactive des Drames",
+        description: "Ne se contente pas d'avertir : le système intervient physiquement lorsque le conducteur n'est plus en état de réagir."
       }
     ],
     partnerLogos: [

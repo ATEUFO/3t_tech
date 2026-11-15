@@ -260,13 +260,13 @@ export default function ClientPage({ slug }: { slug: string }) {
               </p>
 
               <div className="product-hero-stagger flex flex-wrap gap-2.5 mb-8">
-                {product.techStack.slice(0, 4).map((tech, i) => (
+                {product.valuePropositions.slice(0, 4).map((val, i) => (
                   <span
                     key={i}
                     className="flex items-center text-xs md:text-sm font-medium text-zinc-700 dark:text-zinc-300 bg-white dark:bg-zinc-900 px-3.5 py-1.5 rounded-full shadow-sm border border-zinc-200 dark:border-zinc-800"
                   >
                     <CheckCircle2 className="w-3.5 h-3.5 mr-1.5 text-orange-500" />
-                    {tech}
+                    {val}
                   </span>
                 ))}
               </div>
@@ -359,7 +359,7 @@ export default function ClientPage({ slug }: { slug: string }) {
             <div className="lg:col-span-6 space-y-6">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-orange-500/10 text-orange-600 dark:text-orange-400 border border-orange-500/20">
                 <Sparkles className="w-3.5 h-3.5" />
-                Architecture &amp; Écosystème 3D
+                Valeur Ajoutée &amp; Écosystème
               </span>
               <h2 className="text-3xl md:text-4xl font-extrabold text-zinc-900 dark:text-white">
                 {isJobbersFind && "Mise en relation géolocalisée instantanée"}
@@ -556,7 +556,7 @@ export default function ClientPage({ slug }: { slug: string }) {
                           <div className="flex items-center gap-2 text-red-400 font-semibold">
                             <ShieldAlert className="w-4 h-4" /> Assistance physique automatique au freinage
                           </div>
-                          <div>Actionneur linéaire + solénoïde hydraulique enclenchés, feux de détresse allumés et envoi automatique de SMS avec coordonnées GPS satellitaires.</div>
+                          <div>Ralentissement progressif automatique enclenché, feux de détresse allumés et envoi automatique de SMS avec position exacte aux secours et proches.</div>
                         </>
                       )}
                     </div>
@@ -668,13 +668,13 @@ export default function ClientPage({ slug }: { slug: string }) {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/30 mb-4">
                 <Cpu className="w-4 h-4 mr-1" />
-                Ingénierie &amp; Matériel
+                Atouts du Dispositif
               </span>
               <h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-zinc-900 dark:text-white">
-                Architecture IoT &amp; Hardware Embarqué
+                Un Dispositif Conçu pour Sauver des Vies
               </h2>
               <p className="text-zinc-600 dark:text-zinc-400 text-base md:text-lg">
-                Conçu spécifiquement pour les conditions d&apos;exploitation africaines : autonome, robuste et sans besoin de cloud permanent.
+                Pensé pour les réalités du transport routier : autonome, fiable et prêt à intervenir à tout instant.
               </p>
             </div>
 
@@ -789,16 +789,16 @@ export default function ClientPage({ slug }: { slug: string }) {
               <Tilt3D maxTilt={6} scale={1.015}>
                 <div className="p-8 rounded-3xl bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 space-y-6 shadow-lg">
                   <h3 className="text-2xl font-bold text-zinc-900 dark:text-white">
-                    Sécurité de Niveau Bancaire
+                    Protection des Échanges &amp; Confiance
                   </h3>
                   <div className="space-y-4 text-sm text-zinc-600 dark:text-zinc-300">
                     <div className="p-4 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 flex items-center gap-4">
                       <Lock className="w-6 h-6 text-emerald-500 flex-shrink-0" />
                       <div>
                         <div className="font-bold text-zinc-900 dark:text-white">
-                          Chiffrement SSL/TLS &amp; Code PIN
+                          Validation Sécurisée des Transactions
                         </div>
-                        <div>Authentification forte pour valider chaque versement ou retrait.</div>
+                        <div>Chaque versement ou déblocage de fonds nécessite une confirmation explicite du titulaire.</div>
                       </div>
                     </div>
 
@@ -828,18 +828,12 @@ export default function ClientPage({ slug }: { slug: string }) {
                     </div>
 
                     <div className="p-4 rounded-xl bg-white dark:bg-zinc-950 border border-zinc-200 dark:border-zinc-800 flex items-center gap-4">
-                      <Image
-                        src="/assets/brands/firebase.svg"
-                        alt="Firebase"
-                        width={24}
-                        height={24}
-                        className="object-contain flex-shrink-0"
-                      />
+                      <RefreshCw className="w-6 h-6 text-emerald-500 flex-shrink-0" />
                       <div>
                         <div className="font-bold text-zinc-900 dark:text-white">
-                          Notifications Push &amp; SMS Instantanées
+                          Alertes &amp; Suivi en Temps Réel
                         </div>
-                        <div>Intégration Firebase pour informer acheteurs et vendeurs à la seconde près.</div>
+                        <div>Acheteurs et vendeurs sont informés à chaque étape clé de la transaction pour zéro stress.</div>
                       </div>
                     </div>
                   </div>
@@ -943,16 +937,16 @@ export default function ClientPage({ slug }: { slug: string }) {
             <Tilt3D maxTilt={5} scale={1.01} className="h-fit sticky top-32">
               <div className="bg-zinc-100 dark:bg-zinc-900 rounded-3xl p-8 md:p-12 border border-zinc-200 dark:border-zinc-800 shadow-lg">
                 <h3 className="text-2xl font-bold text-zinc-900 dark:text-white mb-8">
-                  Excellence Technologique
+                  Nos Plus-Values Clés
                 </h3>
                 <ul className="space-y-6">
-                  {product.techStack.map((tech, idx) => (
+                  {product.valuePropositions.map((val, idx) => (
                     <li key={idx} className="flex items-start">
                       <div className="mt-1 flex-shrink-0 w-6 h-6 rounded-full bg-orange-100 dark:bg-orange-900/40 flex items-center justify-center mr-4">
                         <div className="w-2 h-2 rounded-full bg-orange-500" />
                       </div>
                       <span className="text-lg text-zinc-700 dark:text-zinc-300 font-medium">
-                        {tech}
+                        {val}
                       </span>
                     </li>
                   ))}
