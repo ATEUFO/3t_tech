@@ -158,11 +158,7 @@ export function Hero() {
         <div className="relative" style={{ perspective: "900px" }}>
           <h1
             ref={titleRef}
-            className="relative text-7xl md:text-9xl font-black tracking-tighter leading-none select-none bg-gradient-to-br from-zinc-900 via-orange-600 to-amber-500 bg-clip-text text-transparent"
-            style={{
-              fontFamily: "'Inter', 'SF Pro Display', system-ui, sans-serif",
-              letterSpacing: "-0.04em",
-            }}
+            className="relative font-ethnocentric text-5xl sm:text-7xl md:text-8xl font-normal tracking-wide leading-none select-none bg-gradient-to-br from-zinc-900 via-orange-600 to-amber-500 bg-clip-text text-transparent"
           >
             3T Tech
           </h1>

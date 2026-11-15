@@ -80,7 +80,7 @@ export function Team() {
       <div className="z-10 container mx-auto px-4 max-w-6xl">
         <div className="team-header text-center mb-16">
           <h2 className="team-header-item text-4xl md:text-5xl font-bold tracking-tight mb-4">
-            L&apos;Équipe 3T Tech
+            L&apos;Équipe <span className="font-ethnocentric font-normal tracking-wide">3T Tech</span>
           </h2>
           <p className="team-header-item text-lg text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
             Trois passionnés par l&apos;informatique et la sécurité, réunis pour concevoir des systèmes robustes et innovants.
