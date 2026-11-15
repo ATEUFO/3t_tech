@@ -43,6 +43,11 @@ export interface Product {
     title: string;
     description: string;
   }[];
+  partnerLogos?: {
+    name: string;
+    logo: string;
+    role: string;
+  }[];
 }
 
 export const products: Product[] = [
@@ -94,6 +99,12 @@ export const products: Product[] = [
         title: "Mise en Relation Directe & Chat Sécurisé",
         description: "Messagerie instantanée et suivi des demandes de dépannage sans intermédiaire opaque."
       }
+    ],
+    partnerLogos: [
+      { name: "Flutter", logo: "/assets/brands/flutter.svg", role: "Application Mobile" },
+      { name: "NestJS", logo: "/assets/brands/nestjs.svg", role: "Backend API" },
+      { name: "PostgreSQL / PostGIS", logo: "/assets/brands/postgresql.svg", role: "Géolocalisation Spatiale" },
+      { name: "Socket.io", logo: "/assets/brands/socketio.svg", role: "Temps Réel" }
     ]
   },
   {
@@ -170,6 +181,12 @@ export const products: Product[] = [
         title: "Module d'Arbitrage Impartial",
         description: "En cas de litige ou de marchandise non conforme, l'acheteur suspend la libération et MboaCash arbitre sur pièces pour rembourser la partie lésée."
       }
+    ],
+    partnerLogos: [
+      { name: "Orange Money", logo: "/assets/brands/orange-money.svg", role: "Paiement & Retrait" },
+      { name: "MTN Mobile Money", logo: "/assets/brands/mtn.svg", role: "Paiement & Retrait" },
+      { name: "Firebase", logo: "/assets/brands/firebase.svg", role: "Notifications Push Temps Réel" },
+      { name: "Google Play", logo: "/assets/brands/google-play.svg", role: "Distribution Android" }
     ]
   },
   {
@@ -273,6 +290,10 @@ export const products: Product[] = [
         title: "Lien avec les Technologies Spatiales",
         description: "Suivi satellitaire en direct et préfiguration d'une connectivité satellite basse orbite (Low-Orbit) pour une couverture totale du continent africain."
       }
+    ],
+    partnerLogos: [
+      { name: "OMS / WHO", logo: "/assets/brands/who.svg", role: "Référentiel Sécurité Routière" },
+      { name: "Banque Mondiale", logo: "/assets/brands/world-bank.svg", role: "Études Facteur Humain" }
     ]
   }
 ];
