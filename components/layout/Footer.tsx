@@ -153,6 +153,8 @@ export function Footer() {
                 src="/assets/3T.Tech_Logo_.svg"
                 alt="3T Global Tech Logo"
                 fill
+                sizes="64px"
+                loading="eager"
                 className="object-contain"
               />
             </div>

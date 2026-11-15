@@ -148,6 +148,7 @@ export function Hero() {
                 width={180}
                 height={180}
                 loading="eager"
+                preload
                 className="relative drop-shadow-xl"
               />
             </div>

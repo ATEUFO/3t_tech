@@ -36,7 +36,8 @@ export function Tilt3D({
     mm.add("(prefers-reduced-motion: no-preference)", () => {
       const rx = gsap.quickTo(el, "rotationX", { duration: 0.35, ease: "power2.out" });
       const ry = gsap.quickTo(el, "rotationY", { duration: 0.35, ease: "power2.out" });
-      const sc = gsap.quickTo(el, "scale", { duration: 0.35, ease: "power2.out" });
+      const sx = gsap.quickTo(el, "scaleX", { duration: 0.35, ease: "power2.out" });
+      const sy = gsap.quickTo(el, "scaleY", { duration: 0.35, ease: "power2.out" });
 
       gsap.set(el, { transformPerspective: perspective, transformStyle: "preserve-3d" });
 
@@ -46,13 +47,15 @@ export function Tilt3D({
         const py = (e.clientY - rect.top) / rect.height - 0.5;
         rx(-py * maxTilt * 2);
         ry(px * maxTilt * 2);
-        sc(scale);
+        sx(scale);
+        sy(scale);
       };
 
       const onPointerLeave = () => {
         rx(0);
         ry(0);
-        sc(1);
+        sx(1);
+        sy(1);
       };
 
       el.addEventListener("pointermove", onPointerMove);
