@@ -92,7 +92,7 @@ const socials = [
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/237600000000",
+    href: "https://wa.me/237657696567",
     icon: <WhatsAppIcon className="w-5 h-5" />,
     color: "hover:bg-green-600",
   },
@@ -235,7 +235,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://wa.me/237600000000"
+                  href="https://wa.me/237657696567"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-3 text-sm hover:text-orange-400 transition-colors group"
