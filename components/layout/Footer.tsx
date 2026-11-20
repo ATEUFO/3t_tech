@@ -241,7 +241,7 @@ export function Footer() {
                   className="flex items-start gap-3 text-sm hover:text-orange-400 transition-colors group"
                 >
                   <Phone className="w-4 h-4 mt-0.5 text-orange-500 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                  +237 6 00 00 00 00
+                  +237 6 57 69 65 67
                 </a>
               </li>
               <li>
