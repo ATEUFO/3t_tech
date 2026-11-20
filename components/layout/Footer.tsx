@@ -230,7 +230,7 @@ export function Footer() {
                   className="flex items-start gap-3 text-sm hover:text-orange-400 transition-colors group"
                 >
                   <Mail className="w-4 h-4 mt-0.5 text-orange-500 flex-shrink-0 group-hover:scale-110 transition-transform" />
-                  contact@3t.tech
+                  contact@3tglobaltech.com
                 </a>
               </li>
               <li>
